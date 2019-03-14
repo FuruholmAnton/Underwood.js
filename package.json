@@ -1,0 +1,30 @@
+{
+  "name": "underwood",
+  "author": "Anton Furuholm <anton.furuholm@gmail.com> (https://www.furuholm.com/)",
+  "version": "1.2.0",
+  "description": "r",
+  "main": "underwood.js",
+  "repository": "https://github.com/FuruholmAnton/Underwood.js.git",
+  "keywords": [
+    "javascript"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "rollup -c --environment DEV:true",
+    "build": "rollup -c --environment BUILD:es5",
+    "build:cjs": "rollup -c --environment BUILD:cjs",
+    "build:es": "rollup -c --environment BUILD:es",
+    "build:prod": "npm run build && npm run build:cjs && npm run build:es"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.2.3",
+    "@babel/plugin-proposal-optional-chaining": "7.2.0",
+    "@babel/polyfill": "7.2.5",
+    "babel-eslint": "10.0.1",
+    "laravel-mix": "^4.0.6",
+    "rollup-plugin-babel": "4.3.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0",
+    "vue-template-compiler": "2.6.9"
+  }
+}
